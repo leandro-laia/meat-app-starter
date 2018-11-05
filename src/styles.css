@@ -73,10 +73,8 @@ body {
   text-overflow: ellipsis;
   margin-bottom: 10px;
   text-transform: uppercase;
-  width: 80%;
+  width: 70%;
   float: left
-}
-.place-info-box-text {
 }
 
 .place-info-box-star {
