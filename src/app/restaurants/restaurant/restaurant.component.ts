@@ -7,9 +7,9 @@ import { Restaurant } from './restaurant.model';
 })
 export class RestaurantComponent implements OnInit {
 
-  constructor() { }
-
   @Input() restaurant: Restaurant
+
+  constructor() { }
 
   ngOnInit() {
   }
