@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingcartService } from './shopping-cart.service';
+import { ShoppingCartService } from './shopping-cart.service';
 import { CartItem } from './cart-item.model';
 import { MenuItem } from '../menu-item/menu-item.model';
 
@@ -9,7 +9,7 @@ import { MenuItem } from '../menu-item/menu-item.model';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor(private shoppingCartService: ShoppingcartService) { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit() {
   }
@@ -29,7 +29,7 @@ export class ShoppingCartComponent implements OnInit {
     this.shoppingCartService.removeItem(item)
   }
 
-  addItem(item: MenuItem){
+  addItem(item: MenuItem) {
     this.shoppingCartService.addItem(item)
   }
 }
