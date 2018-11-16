@@ -7,12 +7,13 @@ import { NgModel } from '@angular/forms'
 })
 export class InputComponent implements OnInit, AfterContentInit {
 
+  /*utilizado como propriedade para uso no markup*/
   input: NgModel
 
   @Input() label: string
   @Input() errorMessage: string
 
-  @ContentChild(NgModel) model: NgModel
+  @ContentChild(NgModel) elementoPaginaDentroComponente: NgModel
 
   constructor() { }
 
@@ -20,7 +21,8 @@ export class InputComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(): void {
-    this.input = this.model
+    /*Atribuição à propriedade para linkar o elemento ao componente para efeitos de manipulação e validação com CSS*/
+    this.input = this.elementoPaginaDentroComponente
     if (this.input === undefined) {
       throw new Error('Esse componente precisa ser usado com uma diretiva ngModel')
     }
