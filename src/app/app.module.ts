@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, FormBuilder, ReactiveFormsModule  } from '@angular/forms'
 
 /*Objetos domínio da aplicação*/
 import { AppComponent } from './app.component';
@@ -54,9 +54,10 @@ import { RatingComponent } from './shared/rating/rating.component';
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [RestaurantsService, ShoppingCartService, OrderService],
+  providers: [RestaurantsService, ShoppingCartService, OrderService, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
