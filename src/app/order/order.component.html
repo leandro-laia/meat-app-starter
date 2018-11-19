@@ -4,9 +4,6 @@
 
 <section class="content">
   <section class="invoice">
-
-        {{form.value | json}} <br>
-        Válido: {{form.valid}}
         
         <form #form="ngForm" novalidate>
           <div class="row">
@@ -28,7 +25,7 @@
             </div>
             <div class="col-sm-3 col-xs-6">
                 <mt-input-container errorMessage="Número obrigatório e somente números" label="Número">
-                  <input class="form-control" name= "number" required ngModel pattern="^[0-9]*$" placeholder="Complemento" autocomplete="off">
+                  <input class="form-control" name= "number" required ngModel pattern="^[0-9]*$" placeholder="Número" autocomplete="off">
                 </mt-input-container>
             </div>
           

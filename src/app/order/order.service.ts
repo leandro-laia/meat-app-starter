@@ -42,6 +42,6 @@ export class OrderService {
         requestOpt.headers = new Headers({'Content-Type':'application/json'})
 
          return this.http.post(`${MEAT_API}/orders`,JSON.stringify(order), requestOpt)
-            .pipe(map(r => r.json()), catchError(e => MyErrorHandler.handleError(e)))
+            .pipe(map(r => r.json().id), catchError(e => MyErrorHandler.handleError(e)))
     }
 }
