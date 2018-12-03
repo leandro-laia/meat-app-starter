@@ -44,4 +44,8 @@ export class OrderService {
          return this.http.post(`${MEAT_API}/orders`,JSON.stringify(order), requestOpt)
             .pipe(map(r => r.json().id), catchError(e => MyErrorHandler.handleError(e)))
     }
+
+    clear(): void {
+        this.cartService.clear()
+    }
 }
